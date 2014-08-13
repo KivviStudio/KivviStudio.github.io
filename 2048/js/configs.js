@@ -4,17 +4,18 @@ var MAX_VALUE = 65536;
 // The won value
 var WON_VALUE = 2048;
 
+// SGM stuff
 var TEST_USER_NAME = 'd232123d10684d89ab875e079df8952d';
-
 var API_URL = "http://sgmels.wizlong.com:10032/app/game/games.jsp";
-
 var TIMEOUT = 90;
-
 var GAME_ID = 1;
 
-var DEBUG_MODE = true;
+// user type
+var USER_TYPE_ENUM = {"sgm": 0, "debug": 1, "anonymous": 2};
+var USER_TYPE = USER_TYPE_ENUM.anonymous;
 
-var ENABLE_AUDIO = true;
+// audio settings
+var ENABLE_AUDIO = false;
 var ENABLE_EFFECT_AUDIO = false;
 
 jQuery.ajaxSetup({
@@ -91,5 +92,5 @@ var RES = [
 	"bottom-car.png",
 	"above-game.png",
 	"game-won.png",
-	"keey-playing-button-img.png",
+	"keey-playing-button-img.png"
 ];
