@@ -20,6 +20,7 @@ function GameManager(size, InputManager, Actuator, StorageManager, AudioManager)
     this.inputManager.on("backToGame", this.backToGame.bind(this));
     this.inputManager.on("enter", this.enter.bind(this));
     this.inputManager.on("share", this.share.bind(this));
+    this.inputManager.on("shareToGame", this.shareToGame.bind(this));
 
     // Do not setup if status is "prompt"
     if (window.app.status != "prompt") {
@@ -73,6 +74,19 @@ GameManager.prototype.backToGame = function () {
 GameManager.prototype.share = function () {
     console.log("GameManager: share");
     window.app.showShare();
+}
+
+GameManager.prototype.shareToGame = function () {
+    if (window.app.status == "share") {
+        console.log("GameManager: shareToGame");
+        window.app.shareToGame();
+        // Clear message.
+        this.actuator.continueGame();
+        // If game is terminated, restart it.
+        if (window.app.manager.isGameTerminated()) {
+            window.app.manager.restart();
+        }
+    }
 }
 
 // Return true if the game is lost, or has won and the user hasn't kept playing

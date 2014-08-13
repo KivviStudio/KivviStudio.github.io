@@ -164,6 +164,11 @@ Application.prototype.showShare = function () {
     window.app.setStatus("share");
 }
 
+Application.prototype.shareToGame = function () {
+    console.log("Application: shareToGame");
+    window.app.setStatus("game");
+}
+
 // Wait till the browser is ready to render the game (avoids glitches)
 window.requestAnimationFrame(function () {
     //new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager, SimpleAudioManager, User, Rank);
