@@ -7,17 +7,9 @@ window.wxData = {
     "title": "凯迪拉克2048"
 };
 
-function share(m, step, percent) {
-    if (m == 0) {
-        document.title = window.wxData.desc = "跑啊，跑神马？你是我的小羊驼～～～";
-    }
-    if (m == 1) {
-        document.title = window.wxData.desc = "继续刷屏！" + step + "步推倒我的小羊驼，打败" + percent + "%朋友圈的人！你能超过我吗？";
-    }
-    if (m == 2) {
-        document.title = window.wxData.desc = "我滴小羊驼呀它又跑掉了，T_T 快帮我抓回来！";
-    }
-};
+function wxUpdateData(m) {
+    window.wxData.desc = "我得了" + m + "分，看看你能得多少分";
+}
 
 WeixinApi.ready(function (Api) {
 

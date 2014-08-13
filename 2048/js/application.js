@@ -73,6 +73,16 @@ Application.prototype.setStatus = function (status) {
             $('.mask.show').removeClass('show');
             $('.rank-container.show').removeClass('show');
         }
+
+        // enable mask layer when show share
+        if (status == "share") {
+            console.log("setStatus: " + status);
+            $('.mask3').addClass('show');
+            $('.share-container').addClass('show');
+        } else {
+            $('.mask3.show').removeClass('show');
+            $('.share-container.show').removeClass('show');
+        }
     }
 };
 
@@ -147,6 +157,11 @@ Application.prototype.showRank = function () {
 
 Application.prototype.backToGame = function () {
     window.app.setStatus("game");
+}
+
+Application.prototype.showShare = function () {
+    console.log("Application: share");
+    window.app.setStatus("share");
 }
 
 // Wait till the browser is ready to render the game (avoids glitches)

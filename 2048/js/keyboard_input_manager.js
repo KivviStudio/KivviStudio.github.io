@@ -79,6 +79,7 @@ KeyboardInputManager.prototype.listen = function() {
 	this.bindButtonPress(".rank-button", this.showRank);
 	this.bindButtonPress(".rank-back-btn", this.backToGame);
 	this.bindButtonPress(".game-won-keep-playing-button", this.keepPlaying);
+    this.bindButtonPress(".share-button", this.share);
 
 	// Respond to swipe events
 	var touchStartClientX, touchStartClientY;
@@ -161,6 +162,12 @@ KeyboardInputManager.prototype.backToGame = function(event) {
 	console.log("backToGame");
 	event.preventDefault();
 	this.emit("backToGame");
+}
+
+KeyboardInputManager.prototype.share = function(event) {
+    console.log("share");
+    event.preventDefault();
+    this.emit("share");
 }
 
 KeyboardInputManager.prototype.bindButtonPress = function(selector, fn) {

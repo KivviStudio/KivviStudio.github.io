@@ -92,5 +92,8 @@ var RES = [
 	"bottom-car.png",
 	"above-game.png",
 	"game-won.png",
-	"keey-playing-button-img.png"
+	"keey-playing-button-img.png",
+
+    // weixin images.
+    "share.png"
 ];

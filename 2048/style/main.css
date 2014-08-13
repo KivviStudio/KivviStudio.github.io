@@ -53,6 +53,39 @@ section.show {
 	display: block;
 }
 
+.mask3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    display: none;
+    z-index: 300;
+}
+
+.mask3.show {
+    display: block;
+}
+
+.share-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/share.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 301;
+}
+
+.share-container.show {
+    display: block;
+}
+
 .prompt-container {
 	position: absolute;
 	z-index: 100;

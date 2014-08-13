@@ -19,6 +19,7 @@ function GameManager(size, InputManager, Actuator, StorageManager, AudioManager)
     this.inputManager.on("showRank", this.showRank.bind(this));
     this.inputManager.on("backToGame", this.backToGame.bind(this));
     this.inputManager.on("enter", this.enter.bind(this));
+    this.inputManager.on("share", this.share.bind(this));
 
     // Do not setup if status is "prompt"
     if (window.app.status != "prompt") {
@@ -67,6 +68,11 @@ GameManager.prototype.backToGame = function () {
     console.log("GameManager: backToGame");
     this.actuator.continueGame();
     window.app.backToGame();
+}
+
+GameManager.prototype.share = function () {
+    console.log("GameManager: share");
+    window.app.showShare();
 }
 
 // Return true if the game is lost, or has won and the user hasn't kept playing
@@ -159,6 +165,10 @@ GameManager.prototype.actuate = function () {
         terminated: this.isGameTerminated()
     });
 
+    // update weixin desc
+    if (USER_TYPE == USER_TYPE_ENUM.anonymous) {
+        wxUpdateData(this.storageManager.getBestScore());
+    }
 };
 
 // Represent the current game as an object
@@ -257,9 +267,12 @@ GameManager.prototype.move = function (direction) {
     if (moved) {
         this.addRandomTile();
 
+        // debug test
+        this.over = true;
+
         if (!this.movesAvailable()) {
-            this.over = true;
             // Game over!
+            this.over = true;
         }
 
         this.actuate();
