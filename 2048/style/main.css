@@ -62,7 +62,7 @@ section.show {
     background-color: #000;
     opacity: 0.7;
     display: none;
-    z-index: 300;
+    z-index: 110;
 }
 
 .mask3.show {
@@ -79,7 +79,7 @@ section.show {
     background-size: contain;
     background-repeat: no-repeat;
     display: none;
-    z-index: 301;
+    z-index: 111;
 }
 
 .share-container.show {
