@@ -155,10 +155,12 @@ KeyboardInputManager.prototype.restart = function (event) {
 };
 
 KeyboardInputManager.prototype.enter = function (event) {
+    event.preventDefault();
     this.emit("enter");
 };
 
 KeyboardInputManager.prototype.shareToGame = function (event) {
+    event.preventDefault();
     this.emit("shareToGame");
 };
 
@@ -188,5 +190,5 @@ KeyboardInputManager.prototype.share = function (event) {
 KeyboardInputManager.prototype.bindButtonPress = function (selector, fn) {
     var button = document.querySelector(selector);
     button.addEventListener("click", fn.bind(this));
-    // button.addEventListener(this.eventTouchend, fn.bind(this));
+    button.addEventListener(this.eventTouchend, fn.bind(this));
 };
