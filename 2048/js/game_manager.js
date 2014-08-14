@@ -73,8 +73,8 @@ GameManager.prototype.backToGame = function () {
 
 GameManager.prototype.share = function () {
     console.log("GameManager: share");
-    //window.app.showShare();
-    this.restart();
+    window.app.showShare();
+    //this.restart();
 }
 
 GameManager.prototype.shareToGame = function () {

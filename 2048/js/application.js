@@ -76,6 +76,7 @@ Application.prototype.setStatus = function (status) {
 
         // enable mask layer when show share
         if (status == "share") {
+            alert("share");
             console.log("setStatus: " + status);
             $('.mask3').addClass('show');
             $('.share-container').addClass('show');
