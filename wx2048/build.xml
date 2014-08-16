@@ -146,7 +146,8 @@
                 <file name="src/wx2048scene.js"/>
                 <file name="src/wx2048layer.js"/>
                 <file name="src/grid.js"/>
-                <file name="src/cell.js"/>
+                <file name="src/tile.js"/>
+                <file name="src/config.js"/>
                 <file name="main.js"/>
 
             </sources>
