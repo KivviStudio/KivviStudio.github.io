@@ -11,7 +11,6 @@ function wxUpdateData(m) {
     window.wxData.desc = "我得了" + m + "分，看看你能得多少分";
 }
 
-/** @expose */
 WeixinApi.ready(function (Api) {
 
     // 分享的回调

@@ -1,4 +1,3 @@
-/** @expose */
 var WeixinApi = (function () {
 
     "use strict";
@@ -224,5 +223,3 @@ var WeixinApi = (function () {
         closeWindow: closeWindow
     };
 })();
-
-window['WeixinApi'] = WeixinApi;
