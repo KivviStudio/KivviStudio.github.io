@@ -148,7 +148,6 @@
                 <file name="src/grid.js"/>
                 <file name="src/tile.js"/>
                 <file name="src/config.js"/>
-                <file name="src/HelloWorld.js"/>
                 <file name="main.js"/>
 
             </sources>
