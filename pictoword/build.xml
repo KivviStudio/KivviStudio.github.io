@@ -87,6 +87,7 @@
                 <file name="cocos2d/labels/CCLabelBMFont.js"/>
                 <file name="cocos2d/menus/CCMenuItem.js"/>
                 <file name="cocos2d/menus/CCMenu.js"/>
+                <file name="cocos2d/audio/CCAudio.js"/>
 
             </sources>
             <sources dir="${basedir}">
@@ -104,6 +105,7 @@
                 <file name="src/questions.js"/>
                 <file name="resources/java-tool/doc.js"/>
                 <file name="src/resultscene.js"/>
+                <file name="src/rankscene.js"/>
                 <file name="main.js"/>
 
             </sources>
