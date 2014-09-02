@@ -106,6 +106,8 @@
                 <file name="resources/java-tool/doc.js"/>
                 <file name="src/resultscene.js"/>
                 <file name="src/rankscene.js"/>
+                <file name="weixin/WeixinApi.js"/>
+                <file name="weixin/weixindata.js"/>
                 <file name="main.js"/>
 
             </sources>
