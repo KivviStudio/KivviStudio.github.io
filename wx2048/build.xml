@@ -101,6 +101,8 @@
                 <file name="src/gameover.js"/>
                 <file name="src/share.js"/>
                 <file name="src/guide.js"/>
+                <file name="weixin/WeixinApi.js"/>
+                <file name="weixin/weixindata.js"/>
                 <file name="main.js"/>
 
             </sources>
